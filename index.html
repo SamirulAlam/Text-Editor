@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="section-hero d-flex align-items-center flex-column">
+        <div class="section-hero__heading-container">
+            <h1 class="text-primary">Text Editor</h1>
+        </div>
+        <div class="section-hero__button-container">
+            <button id="bold" type="button" class="btn btn-light" onclick="makeBold(this)">B</button>
+            <button id="italic" type="button" class="btn btn-light" onclick="makeItalic(this)">I</button>
+            <button id="underline" type="button" class="btn btn-light" onclick="makeUnderline(this)">U</button>
+            <button id="left" type="button" class="align btn btn-light" onclick="alignText(this,'left')"><i class="fa fa-align-left"></i></button>
+            <button id="center" type="button" class="align btn btn-light" onclick="alignText(this,'center')"><i class="fa fa-align-center"></i></button>
+            <button id="right" type="button" class="align btn btn-light" onclick="alignText(this,'right')"><i class="fa fa-align-right"></i></button>
+        </div>
+        <div class="section-hero__editor-container d-flex flex-row">
+            <div class="editor-container__document-container m-2">
+                <p class="text-center">Your Document Text </p>
+                <textarea name="" id="text-input" cols="30" rows="10" oninput="updateText()"></textarea>
+            </div>
+            <div class="editor-container__formatted-container m-2">
+                <p class="text-center">Formatted Text </p>
+                <textarea name="" id="text-output" cols="30" rows="10"></textarea>
+            </div>        
+        </div>
+    </div>
+    
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
